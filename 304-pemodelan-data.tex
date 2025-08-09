@@ -1,0 +1,359 @@
+\subsection*{3.4 Pemodelan Data}
+
+\addcontentsline{toc}{subsection}{3.4 Pemodelan Data}
+
+\noindent ERD merupakan sebuah teknik pemodelan data yang merepresentasikan atribut (kolom) dalam bentuk entitas dengan masing-masing relasi (relations).
+
+\noindent Entitas ini dibedakan identitasnya oleh 1 kolom yang disebut Key Attribute  / Primary Key yaitu kolom yang memiliki nilai yang unik (tidak ada data yang memiliki nilai yang sama). Dalam Sinkronisasi Aplikasi Kabupaten Purwakarta ini nama kolom tersebut adalah id. Adapun istilah Foreign Key, yaitu kolom yang berisi Key Attribute dari entitas lain yang fungsinya adalah sebagai wakil dari data yang dimiliki dari entitas tersebut
+
+\noindent Pada Aplikasi Bagorganisasi Kabupaten Purwakarta, berikut adalah atribut-atribut (kolom) yang terdapat pada suatu entitas (tabel).
+
+\begin{longtable}{|c|m{4cm}|m{9cm}|}
+\hline
+\rowcolor{blue!80} 
+\textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Entitas}} & \textcolor{white}{\textbf{Atribut}} \\
+\hline
+1 & \texttt{berita} & \texttt{id, judul, konten, status\_sorotan, created\_at, updated\_at, deleted\_at, gambar} \\
+\hline
+2 & \texttt{dokumen} & \texttt{id, id\_kategori, nama, berkas, created\_at, updated\_at, deleted\_at} \\
+\hline
+3 & \texttt{gambar\_sampul} & \texttt{id, gambar, created\_at, updated\_at, deleted\_at} \\
+\hline
+4 & \texttt{informasi} & \texttt{id, alamat, no\_hp, email, map, tautan\_x, tautan\_ig, tautan\_fb, tautan\_yt, created\_at, updated\_at, deleted\_at} \\
+\hline
+5 & \texttt{kategori} & \texttt{id, nama, created\_at, updated\_at, deleted\_at} \\
+\hline
+6 & \texttt{kegiatan} & \texttt{id, judul, deskripsi, waktu\_pelaksanaan, thumbnail, created\_at, updated\_at, deleted\_at} \\
+\hline
+7 & \texttt{pencapaian} & \texttt{id, judul, gambar, created\_at, updated\_at, deleted\_at} \\
+\hline
+8 & \texttt{kegiatan\_foto} & \texttt{id, id\_kegiatan, foto, created\_at, updated\_at, deleted\_at} \\
+\hline
+9 & \texttt{login\_history} & \texttt{id, user\_id, ip\_adress, user\_agent, created\_at, updated\_at} \\
+\hline
+10 & \texttt{teks\_depan} & \texttt{id, teks, sub\_teks, created\_at, updated\_at, deleted\_at} \\
+\hline
+11 & \texttt{tentang\_kami} & \texttt{id, deskripsi, gambar, tautan, created\_at, updated\_at, deleted\_at} \\
+\hline
+12 & \texttt{users} & \texttt{id, id\_role, name, username, password, remember\_token, created\_at, updated\_at, deleted\_at} \\
+\hline
+13 & \texttt{visitors} & \texttt{id, ip\_address, user\_agent, visit\_date,  created\_at, updated\_at} \\
+\hline
+\end{longtable}
+
+Untuk lebih jelasnya, berikut adalah paparan table dan tipe data dari tiap-tiap kolom dari seluruh entitas dalam pengembangan aplikasi ini
+
+\newpage
+
+\begin{enumerate}
+    \item \textbf{Table berita}\\
+    Tabel berita menyimpan data berita yang akan ditampilkan pada halaman Landing Page.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{judul} & varchar(255) & Not Null \\
+        \hline
+        3 & \texttt{konten} & text & Not Null \\
+        \hline
+        4 & \texttt{status\_sorotan} & Integer (11) & Not Null \\
+        \hline
+        5 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        6 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+        7 & \texttt{deleted\_at} & timestamp & Null \\
+        \hline
+        8 & \texttt{gambar} & varchar (255) & Null \\
+        \hline
+    \end{tabular}
+      
+    \item \textbf{Table dokumen}\\
+    Tabel dokumen menyimpan data dokumen yang akan ditampilkan pada halaman Landing Page dan dapat didownload oleh User.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{id\_dokumen} & Integer (11) & Not Null \\
+        \hline
+        3 & \texttt{nama} & varchar (255) & Not Null \\
+        \hline
+        4 & \texttt{berkas} & varchar (255) & Not Null \\
+        \hline
+        5 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        6 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+        7 & \texttt{deleted\_at} & timestamp & Null \\
+        \hline
+    \end{tabular}
+    
+    \newpage
+
+    \item \textbf{Table gambar\_sampul}\\
+    Tabel gambar\_sampul menyimpan data gambar yang akan dijadikan sebagain background atau sampul pada halaman Landing Page.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{gambar} & varchar (255) & Not Null \\
+        \hline
+        3 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        4 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+        5 & \texttt{deleted\_at} & timestamp & Null \\
+        \hline
+    \end{tabular}
+
+    \item \textbf{Table informasi}\\
+    Tabel informasi menyimpan data informasi yang akan tampil pada halaman Landing Page.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{alamat} & text & Not Null \\
+        \hline
+        3 & \texttt{no\_hp} & varchar(255) & Not Null \\
+        \hline
+        4 & \texttt{email} & varchar(255) & Not Null \\
+        \hline
+        5 & \texttt{map} & text & Not Null \\
+        \hline
+        6 & \texttt{tautan\_x} & varchar(255) & Not Null \\
+        \hline
+        7 & \texttt{tautan\_ig} & varchar(255) & Not Null \\
+        \hline
+        8 & \texttt{tautan\_fb} & varchar(255) & Not Null \\
+        \hline
+        9 & \texttt{tautan\_yt} & varchar(255) & Not Null \\
+        \hline
+        10 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        11 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+        12 & \texttt{deleted\_at} & timestamp & Null \\
+        \hline
+    \end{tabular}
+
+    \newpage
+
+    \item \textbf{Table kategori}\\
+    Tabel kategori menyimpan data kategori dari dokumen yang diupload dan yang akan ditampilkan pada halaman Landing Page.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{nama} & varchar (255) & Not Null \\
+        \hline
+        4 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        5 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+        6 & \texttt{deleted\_at} & timestamp & Null \\
+        \hline
+    \end{tabular}
+    
+    \item \textbf{Table kegiatan}\\
+    Tabel kegiatan menyimpan data kegiatan yang akan ditampilkan pada halaman Landing Page.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{judul} & varchar (255) & Not Null \\
+        \hline
+        3 & \texttt{deskripsi} & text & Not Null \\
+        \hline
+        4 & \texttt{waktu\_penyelesaian} & date & Not Null \\
+        \hline
+        5 & \texttt{thumbnail} & varchar (255) & Not Null \\
+        \hline
+        6 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        7 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+        8 & \texttt{deleted\_at} & timestamp & Null \\
+        \hline
+    \end{tabular}
+
+    \newpage
+
+    \item \textbf{Table kegiatan\_foto}\\
+    Tabel kegiatan\_foto menyimpan foto dari kegiatan yang telah dilaksanakan dan akan ditampilkan pada halaman Landing Page.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{id\_kegiatan} & Integer (11) & Not Null \\
+        \hline
+        3 & \texttt{foto} & varchar (255) & Not Null \\
+        \hline
+        4 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        5 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+        6 & \texttt{deleted\_at} & timestamp & Null \\
+        \hline
+    \end{tabular}
+
+    \item \textbf{Table login\_history}\\
+    Tabel login\_history menyimpan data user yang melakukan login agar terlihat sudah berapa kali melakukan login ke website ini.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{user\_id} & Integer (11) & Not Null \\
+        \hline
+        3 & \texttt{ip\_address} & varchar (255) &  Null \\
+        \hline
+        4 & \texttt{user\_agent} & text & Null \\
+        \hline
+        5 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        6 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+    \end{tabular}
+
+    \newpage
+
+    \item \textbf{Table pencapaian}\\
+    Tabel pencapaian menyimpan data pencapaian yang akan ditampilkan pada halaman Landing Page.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{judul} & varchar (255) & Not Null \\
+        \hline
+        3 & \texttt{gambar} & varchar (255) & Not Null \\
+        \hline
+        4 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        5 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+        6 & \texttt{deleted\_at} & timestamp & Null \\
+        \hline
+    \end{tabular}
+
+    \item \textbf{Table teks\_depan}\\
+    Tabel teks\_depan menyimpan data tulisan yang akan ditampilkan pada halaman Landing Page.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{teks} & varchar (255) & Not Null \\
+        \hline
+        3 & \texttt{sub\_teks} & varchar (255) & Not Null \\
+        \hline
+        4 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        5 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+        6 & \texttt{deleted\_at} & timestamp & Null \\
+        \hline
+    \end{tabular}
+
+    \newpage
+
+    \item \textbf{Table tentang\_kami}\\
+    Tabel teks\_depan menyimpan data tulisan yang akan ditampilkan pada halaman Landing Page.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{deskripsi} & text & Null \\
+        \hline
+        3 & \texttt{gambar} & varchar (255) & Null \\
+        \hline
+        4 & \texttt{tautan} & varchar (255) & Null \\
+        \hline
+        5 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        6 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+        7 & \texttt{deleted\_at} & timestamp & Null \\
+        \hline
+    \end{tabular}
+
+    \item \textbf{Table users}\\
+    Tabel users menyimpan data users yang mengelola halaman Landing Page.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{id\_role} & Integer (11) & Not Null \\
+        \hline
+        3 & \texttt{name} & varchar (255) & Not Null \\
+        \hline
+        4 & \texttt{username} & varchar (255) & Not Null \\
+        \hline
+        5 & \texttt{password} & varchar (255) & Not Null \\
+        \hline
+        6 & \texttt{remember\_token} & varchar (100) & Not Null \\
+        \hline
+        7 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        8 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+        9 & \texttt{deleted\_at} & timestamp & Null \\
+        \hline
+    \end{tabular}
+
+    \newpage
+
+    \item \textbf{Table visitors}\\
+    Tabel visitors menyimpan data yang membuka halaman Landing Page.\\
+    \begin{tabular}{|c|m{4cm}|m{4cm}|m{4cm}|}
+        \hline
+        \rowcolor{blue!80}
+        \textcolor{white}{\textbf{No}} & \textcolor{white}{\textbf{Atribut}} & \textcolor{white}{\textbf{Tipe Data / Ukuran}} & \textcolor{white}{\textbf{Keterangan}} \\
+        \hline
+        1 & \texttt{id} & Integer (11) & Primary Key \\
+        \hline
+        2 & \texttt{ip\_address} & Text & Not Null \\
+        \hline
+        3 & \texttt{visit\_date} & date & Not Null \\
+        \hline
+        4 & \texttt{created\_at} & timestamp & Null \\
+        \hline
+        5 & \texttt{updated\_at} & timestamp & Null \\
+        \hline
+    \end{tabular}
+    
+    \end{enumerate}
+    

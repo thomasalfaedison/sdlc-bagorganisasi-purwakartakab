@@ -1,0 +1,147 @@
+\subsection*{3.2 Pemodelan Use Case}
+
+\addcontentsline{toc}{subsection}{3.2 Use Case}
+
+\noindent Use Case merupakan sebuah teknik pemodelan sistem yang merepresentasikan interaksi antara aktor (pengguna atau sistem lain) dengan sistem yang dibangun untuk mencapai suatu tujuan tertentu. Setiap use case menggambarkan bagaimana suatu fitur atau fungsi dijalankan oleh aktor melalui rangkaian langkah-langkah dalam sistem.
+
+\noindent Aktor dalam use case dibedakan berdasarkan peran dan hak aksesnya terhadap sistem. Sebagai contoh dalam Sistem Informasi Aplikasi Kabupaten Purwakarta, aktor dapat berupa Admin maupun Guest. Aktor Admin memiliki hak akses penuh terhadap sistem, seperti mengelola konten berita, melakukan login ke halaman backend, serta melakukan perubahan data. Sementara itu, Guest hanya memiliki akses terbatas, seperti melihat halaman landing page.
+
+\noindent Relasi antara aktor dan use case digambarkan melalui diagram use case, yang menunjukkan interaksi antara masing-masing aktor dengan fitur-fitur sistem. Hal ini membantu dalam memahami kebutuhan sistem dan alur penggunaan dari sudut pandang pengguna.
+
+\noindent Berikut merupakan gambaran secara umum untuk Use Case pada Aplikasi Bagorganisasi.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=12.45cm, height=14.75cm]{media/use-case/bagorganisasi-use-case-umum.drawio.png}
+        \caption{Use Case Umum}
+        \label{fig:bagan-alir}
+    \end{figure}
+
+\newpage
+
+\noindent Berikut use case yang ada pada Aplikasi Bagorganisasi Kabupaten Purwakarta.
+
+\begin{enumerate}
+    \item \textbf{Use Case Landing Page}\\
+    Berikut merupakan Use Case untuk Landing Page.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=7.45cm, height=7.75cm]{media/use case bagorganisasi.drawio.png}
+        \caption{Use Case Landing Page}
+        \label{fig:bagan-alir}
+    \end{figure}
+
+    Pada use case tersebut, ada 2 (dua) Actor yaitu Viewer dan Admin. Untuk actor viewer hanya dapat melihat tampilan Landing Page, mengakses menu pada header, dan mendownload dokumen yang ada pada Landing Page.
+    
+    Sedangkan Admin dapat mengelola konten yang ada pada Landing Page seperti mengganti gambar sampul, mengganti tulisan, menambahkan konten berita, dan mengupload dokumen.
+
+    \newpage
+
+    \item \textbf{User Case Menu Berita}\\
+    Berikut merupakan Use Case untuk Menu Berita.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=7.45cm, height=7.75cm]{media/use-case/use case bagorganisasi-berita.drawio.png}
+        \caption{User Case Menu Berita}
+        \label{fig:bagan-alir}
+    \end{figure}
+
+    Pada use case tersebut, admin dapat mengelola berita seperti isi konten berita dan tampilan dokumentasi foto berita yang ditambahkan. Sedangkan Guest hanya dapat melihat dan filter berita saja.
+    
+    \item \textbf{User Case Menu Dokumen}\\
+    Berikut merupakan Use Case untuk Menu Dokumen.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=7.45cm, height=7.75cm]{media/use case bagorganisasi-dokumen.drawio.png}
+        \caption{Use Case Menu Dokumen}
+        \label{fig:bagan-alir}
+    \end{figure}
+
+    Pada use case tersebut, admin dapat mengelola dokumen seperti melakukan upload dokumen untuk ditampilkan pada halaman Landing Page dan guest dapat melakukan filter serta unduh dokumen.
+
+    \item \textbf{User Case Menu Pencapaian}\\
+    Berikut merupakan Use Case untuk menu Pencapaian.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=7.45cm, height=7.75cm]{media/use-case/bagorganisasi-pencapaian.drawio.png}
+        \caption{Use Case Menu Pencapaian}
+        \label{fig:bagan-alir}
+    \end{figure}
+
+    Pada use case tersebut, admin dapat mengelola informasi pencapaian untuk ditampilkan pada halaman Landing Page. Sedangkan guest dapat hanya dapat melihat saja.
+
+    \newpage
+
+    \item \textbf{User Case Menu Gambar Sampul}\\
+    Berikut merupakan Use Case untuk menu Gambar Sampul.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=7.45cm, height=7.75cm]{media/use case bagorganisasi-gambar-sampul.drawio.png}
+        \caption{Use Case Menu Gambar Sampul}
+        \label{fig:bagan-alir}
+    \end{figure}
+
+    Pada use case tersebut, admin dapat mengelola tampilan gambar background pada halaman Landing Page. SeSedangkan guest dapat hanya dapat melihat saja.
+
+    \item \textbf{User Case Menu Teks Depan}\\
+    Berikut merupakan Use Case untuk menu Teks Depan
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=7.45cm, height=7.75cm]{media/use case bagorganisasi-text-depan.drawio.png}
+        \caption{Use Case Menu Teks Depan}
+        \label{fig:bagan-alir}
+    \end{figure}
+
+    Pada use case tersebut, admin dapat mengelola tulisan pada halaman depan Landing Page. Sedangkan guest dapat hanya dapat melihat saja.
+
+    \item \textbf{User Case Menu Tentang Kami}\\
+    Berikut merupakan Use Case untuk menu Tentang Kami
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=7.45cm, height=7.75cm]{media/use-case/bagorganisasi-tentang-kami.drawio.png}
+        \caption{Use Case Menu Tentang Kami}
+        \label{fig:bagan-alir}
+    \end{figure}
+
+    Pada use case tersebut, admin dapat mengelola informasi tentang kami seperti deskripsi, link tautan dan gambar yang akan ditampilkan pada halaman Landing Page. Sedangkan guest dapat hanya dapat melihat saja.
+
+    \newpage
+
+    \item \textbf{User Case Menu Tautan Terkait}\\
+    Berikut merupakan Use Case untuk menu Tautan Terkait
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=7.45cm, height=7.75cm]{media/use-case/bagorganisasi-tautan-terkait.drawio.png}
+        \caption{Use Case Menu Tautan Terkait}
+        \label{fig:bagan-alir}
+    \end{figure}
+
+    Pada use case tersebut, admin dapat mengelola tautan atau link dari aplikasi yang digunakan Pemerintahan Kabupaten Purwakarta untuk ditampilkan pada halaman depan Landing Page. Sedangkan guest dapat dapat melihat dan mengakses link/tautan tersebut.
+
+    \newpage
+
+    \item \textbf{User Case Menu Informasi}\\
+    Berikut merupakan Use Case untuk menu Informasi
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=7.45cm, height=7.75cm]{media/use-case/bagorganisasi-informasi.drawio.png}
+        \caption{Use Case Menu Informasi}
+        \label{fig:bagan-alir}
+    \end{figure}
+
+    Pada use case tersebut, admin dapat mengelola informasi seperti kontak dan map pada halaman depan Landing Page. Sedangkan guest dapat hanya dapat melihat saja.
+
+    \newpage
+
+    \item \textbf{User Case Menu Users}\\
+    Berikut merupakan Use Case untuk menu Users
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=8.45cm, height=7.75cm]{media/use case bagorganisasi-users.drawio.png}
+        \caption{Use Case Menu Users}
+        \label{fig:bagan-alir}
+    \end{figure}
+
+    Pada use case tersebut, admin dapat mengelola tulisan pada halaman depan Landing Page.
+    
+    \end{enumerate}
+    

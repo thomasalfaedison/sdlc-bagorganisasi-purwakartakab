@@ -1,0 +1,124 @@
+\subsubsection*{5.2.3 Menu Berita}
+
+\addcontentsline{toc}{subsubsection}{5.2.3 Menu Berita}
+
+\begin{enumerate}
+    \item \textbf{Filter Berita}\\
+    Berikut table pengujian untuk filter Berita.
+    \begin{table}[h!]
+        \centering
+        \renewcommand{\arraystretch}{1.3}
+        \caption{Hasil Pengujian Fitur Filter}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+        \hline
+        \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+        \hline
+        1 & Filter Berdasarkan Judul yang Sesuai & Lulus & Menampilkan Berita dengan Judul yang sesuai dengan hasil Filter. \\
+        \hline
+        2 & Filter Judul yang Tidak Ada & Lulus & Tidak menampilkan data berita dikarenakan judul yang dimasukkan tidak ada. \\
+        \hline
+        3 & Reset filter (kembali ke tampilan awal) & Lulus & Semua filter dapat dikembalikan ke kondisi default dan data ditampilkan seluruhnya. \\
+        \hline
+        \end{tabular}
+        \label{tab:pengujian-dashboard}
+        \end{table}
+
+    \item \textbf{Tambah Berita}\\
+    Berikut table pengujian untuk Tambah Berita.
+    \begin{table}[h!]
+        \centering
+        \renewcommand{\arraystretch}{1.3}
+        \caption{Hasil Pengujian Fitur Tambah Berita}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+        \hline
+        \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+        \hline
+        1 & Input judul berita & Lulus & Sistem menerima dan menyimpan judul yang diinputkan dengan benar. \\
+        \hline
+        2 & Validasi input judul kosong & Lulus & Sistem menampilkan pesan error jika judul tidak diisi. \\
+        \hline
+        3 & Input konten berita & Lulus & Konten berita disimpan dan ditampilkan sesuai isi yang dimasukkan. \\
+        \hline
+        4 & Validasi konten kosong & Lulus & Sistem menolak penyimpanan jika konten tidak diisi. \\
+        \hline
+        5 & Upload gambar berita (format .jpg/.png) & Lulus & Gambar berhasil diunggah dan ditampilkan dalam berita. \\
+        \hline
+        6 & Pilih status berita (aktif/tidak aktif) & Lulus & Status berhasil tersimpan dan mempengaruhi visibilitas berita di frontend. \\
+        \hline
+        7 & Klik tombol "Simpan" setelah form terisi lengkap & Lulus & Berita tersimpan dan ditampilkan pada daftar berita admin. \\
+        \hline
+        \end{tabular}
+        \label{tab:pengujian-tambah-berita}
+        \end{table}
+    
+    \item \textbf{Detail Berita} \\
+    Berikut table pengujian detail berita
+    \begin{table}[h!]
+        \centering
+        \renewcommand{\arraystretch}{1.3}
+        \caption{Hasil Pengujian Fitur Detail Berita}
+        \label{tab:pengujian-detail-berita}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+        \hline
+        \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+        \hline
+        1 & Menampilkan judul berita & Lulus & Judul berita tampil sesuai dengan data yang dipilih oleh pengguna. \\
+        \hline
+        2 & Menampilkan konten/isi berita & Lulus & Konten berita ditampilkan lengkap dengan format teks dan paragraf sesuai yang disimpan. \\
+        \hline
+        3 & Menampilkan gambar berita & Lulus & Gambar yang diunggah tampil dengan ukuran proporsional dan resolusi yang baik. \\
+        \hline
+        4 & Menampilkan status sorotan  & Lulus & Status sesuai dengan data yang tersimpan. \\
+        \hline
+        \end{tabular}
+        \end{table}
+
+    \item \textbf{Mengubah Berita} \\
+    Berikut table pengujian mengubah berita
+    \begin{table}[h!]
+        \centering
+        \renewcommand{\arraystretch}{1.3}
+        \caption{Hasil Pengujian Fitur Ubah Berita}
+        \label{tab:pengujian-ubah-berita}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+        \hline
+        \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+        \hline
+        1 & Menampilkan data berita ke dalam form edit & Lulus & Data judul, konten, gambar, dan status tampil dengan benar di form. \\
+        \hline
+        2 & Mengubah judul berita & Lulus & Perubahan judul berhasil disimpan dan ditampilkan di daftar berita. \\
+        \hline
+        3 & Mengubah konten berita & Lulus & Konten dapat diperbarui, dan tampil lengkap saat dibuka. \\
+        \hline
+        4 & Mengubah gambar berita & Lulus & Gambar baru berhasil diunggah dan menggantikan gambar sebelumnya. \\
+        \hline
+        5 & Mengubah status berita & Lulus & Status berhasil diubah dan mempengaruhi visibilitas berita. \\
+        \hline
+        6 & Menyimpan form dengan semua input valid & Lulus & Sistem menampilkan pesan sukses dan kembali ke halaman daftar berita. \\
+        \hline
+        7 & Menyimpan form dengan input kosong & Lulus & Sistem menolak penyimpanan dan menampilkan pesan validasi wajib isi. \\
+        \hline
+        \end{tabular}
+        \end{table}
+
+    \item \textbf{Hapus Berita} \\
+    Berikut pengujian hapus berita
+    \begin{table}[h!]
+        \centering
+        \renewcommand{\arraystretch}{1.3}
+        \caption{Hasil Pengujian Fitur Hapus Berita}
+        \label{tab:pengujian-hapus-berita}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+        \hline
+        \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+        \hline
+        1 & Klik icon hapus pada daftar berita & Lulus & Sistem menampilkan konfirmasi sebelum menghapus berita. \\
+        \hline
+        2 & Konfirmasi penghapusan disetujui & Lulus & Berita berhasil dihapus dari database dan tidak tampil di daftar. \\
+        \hline
+        3 & Konfirmasi penghapusan dibatalkan & Lulus & Penghapusan dibatalkan dan berita tetap muncul di daftar. \\
+        \hline
+        \end{tabular}
+        \end{table}
+
+\end{enumerate}

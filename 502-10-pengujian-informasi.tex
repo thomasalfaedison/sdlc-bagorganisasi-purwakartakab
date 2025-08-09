@@ -1,0 +1,128 @@
+\subsubsection*{5.2.10 Menu Informasi}
+
+\addcontentsline{toc}{subsubsection}{5.2.10 Menu Informasi}
+
+\noindent \textbf{1. Tambah Informasi}\\
+    Berikut table pengujian untuk Tambah Informasi.
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.65}
+        \centering
+        \caption{Hasil Pengujian Fitur Tambah Informasi}
+        \label{tab:pengujian-tambah-Informasi}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Menampilkan form tambah informasi & Lulus & Form input ditampilkan lengkap dengan semua kolom seperti alamat, email, dan link media sosial. \\
+            \hline
+            2 & Validasi kolom alamat & Lulus & Form menolak pengiriman jika kolom alamat kosong. \\
+            \hline
+            3 & Validasi nomor telepon (angka saja) & Lulus & Sistem menolak input jika nomor berisi huruf atau simbol. \\
+            \hline
+            4 & Validasi email & Lulus & Form menolak jika format email tidak valid (contoh: tanpa "@"). \\
+            \hline
+            5 & Validasi link map & Lulus & Sistem menerima link Google Maps yang valid dan menolak yang salah format. \\
+            \hline
+            6 & Validasi link media sosial (X, Facebook, Instagram, YouTube) & Lulus & Sistem hanya menerima URL yang sesuai dengan domain masing-masing platform. \\
+            \hline
+            7 & Simpan informasi berhasil & Lulus & Data berhasil disimpan ke database dan muncul di tampilan publik. \\
+            \hline
+            \end{tabular}
+        \end{table}
+
+        \newpage
+    
+\noindent \textbf{2. Detail Informasi} \\
+    Berikut table pengujian detail Informasi
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.65}
+        \centering
+        \caption{Hasil Pengujian Fitur Detail Informasi}
+        \label{tab:pengujian-detail-Informasi}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Menampilkan alamat instansi & Lulus & Alamat lengkap ditampilkan dengan format yang rapi dan terbaca. \\
+            \hline
+            2 & Menampilkan nomor telepon & Lulus & Nomor telepon tampil. \\
+            \hline
+            3 & Menampilkan email & Lulus & Email ditampilkan dengan benar. \\
+            \hline
+            4 & Tautan Google Maps (Link Map) & Lulus & Tautan mengarah ke lokasi instansi yang tepat di Google Maps. \\
+            \hline
+            5 & Tautan X (Twitter) & Lulus & Tautan membuka profil resmi instansi di platform X (Twitter) dalam tab baru. \\
+            \hline
+            6 & Tautan Facebook (FB) & Lulus & Mengarahkan ke halaman Facebook instansi dengan benar. \\
+            \hline
+            7 & Tautan Instagram (IG) & Lulus & Tautan terbuka ke profil Instagram instansi. \\
+            \hline
+            8 & Tautan YouTube (YT) & Lulus & Tautan membuka channel YouTube instansi dan menampilkan video publik. \\
+            \hline
+            \end{tabular}
+        \end{table}
+
+\noindent \textbf{3. Mengubah Informasi} \\
+    Berikut table pengujian mengubah Informasi
+    \renewcommand{\arraystretch}{0.65}
+\small
+\begin{longtable}{|c|p{5cm}|c|p{5.5cm}|}
+\caption{Hasil Pengujian Fitur Ubah Informasi} \label{tab:pengujian-ubah-Informasi} \\
+\hline
+\textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+\hline
+\endhead
+
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+
+1 & Menampilkan data informasi instansi di form ubah & Lulus & Form memuat data alamat, no telepon, email, dan link sosial media dengan benar. \\
+\hline
+2 & Validasi input kosong & Lulus & Sistem menampilkan pesan kesalahan jika field penting (seperti alamat atau email) dikosongkan. \\
+\hline
+3 & Validasi format email & Lulus & Sistem menolak input email dengan format yang tidak sesuai. \\
+\hline
+4 & Validasi format link & Lulus & Sistem memeriksa format URL untuk link map dan media sosial. \\
+\hline
+5 & Update alamat dan no telepon & Lulus & Data alamat dan no telepon berhasil diperbarui dan tersimpan ke database. \\
+\hline
+6 & Update email dan link map & Lulus & Email dan link Google Maps berhasil diperbarui dan tampil di halaman publik. \\
+\hline
+7 & Update link media sosial (X, FB, IG, YouTube) & Lulus & Semua link media sosial tersimpan dan tautannya aktif saat diuji. \\
+\hline
+8 & Pesan sukses saat simpan & Lulus & Sistem menampilkan notifikasi sukses setelah data disimpan. \\
+\hline
+\end{longtable}
+
+\vspace{-0.8em}
+
+\noindent \textbf{4. Hapus Informasi} \\
+    Berikut pengujian hapus Informasi
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.3}
+        \caption{Hasil Pengujian Fitur Hapus Informasi}
+        \label{tab:pengujian-hapus-Informasi}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+        \hline
+        \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+        \hline
+        1 & Klik icon hapus pada daftar Informasi & Lulus & Sistem menampilkan konfirmasi sebelum menghapus Informasi. \\
+        \hline
+        2 & Konfirmasi penghapusan disetujui & Lulus & Informasi berhasil dihapus dari database dan tidak tampil di daftar. \\
+        \hline
+        3 & Konfirmasi penghapusan dibatalkan & Lulus & Penghapusan dibatalkan dan Informasi tetap muncul di daftar. \\
+        \hline
+        \end{tabular}
+        \end{table}

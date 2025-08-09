@@ -1,0 +1,113 @@
+\subsubsection*{5.2.8 Menu Tentang Kami}
+
+\addcontentsline{toc}{subsubsection}{5.2.8 Menu Tentang Kami}
+
+\noindent \textbf{1. Tambah Tentang Kami}\\
+    Berikut table pengujian untuk Tambah Tentang Kami.
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.65}
+        \centering
+        \caption{Hasil Pengujian Fitur Tambah Tentang Kami}
+        \label{tab:pengujian-tambah-Tentang Kami}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Menampilkan form tambah informasi "Tentang Kami" & Lulus & Form tampil dengan kolom deskripsi, tautan/link, dan unggah gambar. \\
+            \hline
+            2 & Input deskripsi profil instansi & Lulus & Deskripsi dapat diketik dengan bebas dan disimpan dengan baik. \\
+            \hline
+            3 & Input tautan eksternal (URL) & Lulus & Link dapat disimpan dan diverifikasi, serta aktif saat ditampilkan. \\
+            \hline
+            4 & Upload gambar profil instansi & Lulus & Gambar berhasil diunggah dan ditampilkan dalam pratinjau. \\
+            \hline
+            5 & Validasi form kosong & Lulus & Sistem menampilkan pesan kesalahan saat ada kolom wajib yang kosong. \\
+            \hline
+            6 & Simpan informasi "Tentang Kami" & Lulus & Informasi disimpan ke database dan dapat ditampilkan di halaman publik. \\
+            \hline
+            \end{tabular}
+        \end{table}
+
+        \newpage
+    
+\noindent \textbf{2. Detail Tentang Kami} \\
+    Berikut table pengujian detail Tentang Kami
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.65}
+        \centering
+        \caption{Hasil Pengujian Fitur Detail Tentang Kami}
+        \label{tab:pengujian-detail-Tentang Kami}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Menampilkan deskripsi instansi/organisasi & Lulus & Deskripsi tampil lengkap, tidak terpotong, dan sesuai data yang dimasukkan oleh admin. \\
+            \hline
+            2 & Menampilkan tautan/link eksternal (jika ada) & Lulus & Tautan berfungsi dengan baik, terbuka di tab baru, dan mengarah ke halaman resmi yang benar. \\
+            \hline
+            3 & Menampilkan gambar/logo instansi & Lulus & Gambar tampil dengan ukuran proporsional dan resolusi baik pada semua perangkat. \\
+            \hline
+            \end{tabular}
+        \end{table}
+
+\noindent \textbf{3. Mengubah Tentang Kami} \\
+    Berikut table pengujian mengubah Tentang Kami
+    \small
+\renewcommand{\arraystretch}{1.1} % sesuaikan agar teks tidak terlalu rapat
+\begin{longtable}{|c|p{5cm}|c|p{5.5cm}|}
+\caption{Hasil Pengujian Fitur Ubah Tentang Kami}
+\label{tab:pengujian-ubah-tentangkami} \\
+\hline
+\textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+\hline
+\endhead
+
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+
+1 & Menampilkan form “Tentang Kami” & Lulus & Form menampilkan kolom deskripsi, tautan, dan gambar dengan data yang sudah tersimpan. \\
+\hline
+2 & Mengubah deskripsi & Lulus & Sistem berhasil menyimpan dan menampilkan deskripsi yang diperbarui. \\
+\hline
+3 & Menambahkan/ubah tautan eksternal & Lulus & Tautan dapat diperbarui dan saat diklik mengarah ke alamat yang benar. \\
+\hline
+4 & Mengunggah gambar baru & Lulus & Gambar baru berhasil diunggah dan ditampilkan di halaman publik. \\
+\hline
+5 & Validasi form kosong & Lulus & Sistem menolak simpan jika deskripsi kosong atau link tidak valid. \\
+\hline
+6 & Validasi format gambar (jpg/png) & Lulus & Sistem hanya menerima format gambar tertentu dan menolak file selain gambar. \\
+\hline
+
+\end{longtable}
+\vspace{-10pt}
+
+\noindent \textbf{4. Hapus Tentang Kami} \\
+    Berikut pengujian hapus Tentang Kami
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.3}
+        \caption{Hasil Pengujian Fitur Hapus Tentang Kami}
+        \label{tab:pengujian-hapus-Tentang Kami}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+        \hline
+        \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+        \hline
+        1 & Klik icon hapus pada daftar Tentang Kami & Lulus & Sistem menampilkan konfirmasi sebelum menghapus Tentang Kami. \\
+        \hline
+        2 & Konfirmasi penghapusan disetujui & Lulus & Tentang Kami berhasil dihapus dari database dan tidak tampil di daftar. \\
+        \hline
+        3 & Konfirmasi penghapusan dibatalkan & Lulus & Penghapusan dibatalkan dan Tentang Kami tetap muncul di daftar. \\
+        \hline
+        \end{tabular}
+        \end{table}

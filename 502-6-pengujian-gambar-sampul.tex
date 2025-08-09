@@ -1,0 +1,96 @@
+\subsubsection*{5.2.6 Menu Gambar Sampul}
+
+\addcontentsline{toc}{subsubsection}{5.2.6 Menu Gambar Sampul}
+
+\noindent \textbf{1. Tambah Gambar Sampul}\\
+    Berikut table pengujian untuk Tambah Gambar Sampul.
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.75}
+        \centering
+        \caption{Hasil Pengujian Fitur Tambah Gambar Sampul}
+        \label{tab:pengujian-tambah-Gambar Sampul}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Form tambah Gambar Sampul tampil & Lulus & Halaman form tampil dengan kolom unggah gambar dan pilihan status aktif. \\
+            \hline
+            2 & Input gambar valid & Lulus & Gambar berhasil diunggah dan disimpan. \\
+            \hline
+            3 & Tombol simpan ditekan dengan isian lengkap & Lulus & Data tersimpan ke database dan muncul di daftar Gambar Sampul. \\
+            \hline
+            4 & Validasi format gambar saat upload & Lulus & Sistem menolak file dengan format tidak didukung. \\
+            \hline
+            5 & Memilih status aktif & Lulus & Status yang dipilih tersimpan dan sesuai saat ditampilkan. \\
+            \hline
+            \hline
+            6 & Form disimpan tanpa memilih gambar & Lulus & Sistem menampilkan pesan kesalahan “Gambar wajib diunggah”. \\
+            \hline
+            \end{tabular}
+        \end{table}
+    
+\noindent \textbf{2. Detail Gambar Sampul} \\
+    Berikut table pengujian detail Gambar Sampul
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.75}
+        \centering
+        \caption{Hasil Pengujian Fitur Detail Gambar Sampul}
+        \label{tab:pengujian-detail-Gambar Sampul}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Menampilkan gambar Gambar Sampul & Lulus & Gambar tampil dengan ukuran dan kualitas yang sesuai pada halaman detail. \\
+            \hline
+            2 & Tombol unduh gambar tersedia & Lulus & Terdapat tombol unduh di bawah gambar atau di pojok atas tampilan. \\
+            \hline
+            3 & Fungsi unduh gambar berjalan baik & Lulus & Gambar berhasil diunduh ke perangkat pengguna tanpa korupsi. \\
+            \hline
+            \end{tabular}
+        \end{table}
+
+\noindent \textbf{3. Mengubah Gambar Sampul} \\
+    Berikut table pengujian mengubah Gambar Sampul
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.75}
+        \centering
+        \caption{Hasil Pengujian Fitur Ubah Gambar Sampul}
+        \label{tab:pengujian-ubah-Gambar Sampul}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Menampilkan data Gambar Sampul yang akan diubah & Lulus & Data gambar dan status aktif ditampilkan dengan benar sesuai data yang dipilih. \\
+            \hline
+            2 & Mengunggah ulang gambar Gambar Sampul & Lulus & Gambar baru berhasil diunggah dan menggantikan gambar sebelumnya. \\
+            \hline
+            3 & Validasi file gambar & Lulus & Sistem menolak file non-gambar dan menampilkan pesan kesalahan. \\
+            \hline
+            4 & Tombol simpan perubahan & Lulus & Setelah klik simpan, data berhasil diperbarui dan ditampilkan kembali dengan data terbaru. \\
+            \hline
+            \end{tabular}
+        \end{table}
+
+\noindent \textbf{4. Hapus Gambar Sampul} \\
+    Berikut pengujian hapus Gambar Sampul
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.3}
+        \caption{Hasil Pengujian Fitur Hapus Gambar Sampul}
+        \label{tab:pengujian-hapus-Gambar Sampul}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+        \hline
+        \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+        \hline
+        1 & Klik icon hapus pada daftar Gambar Sampul & Lulus & Sistem menampilkan konfirmasi sebelum menghapus Gambar Sampul. \\
+        \hline
+        2 & Konfirmasi penghapusan disetujui & Lulus & Gambar Sampul berhasil dihapus dari database dan tidak tampil di daftar. \\
+        \hline
+        3 & Konfirmasi penghapusan dibatalkan & Lulus & Penghapusan dibatalkan dan Gambar Sampul tetap muncul di daftar. \\
+        \hline
+        \end{tabular}
+        \end{table}

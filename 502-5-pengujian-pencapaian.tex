@@ -1,0 +1,125 @@
+\subsubsection*{5.2.5 Menu Pencapaian}
+
+\addcontentsline{toc}{subsubsection}{5.2.5 Menu Pencapaian}
+
+\noindent \textbf{1. Tambah Pencapaian}\\
+    Berikut table pengujian untuk Tambah Pencapaian.
+    \renewcommand{\arraystretch}{0.75}
+\begin{longtable}{|c|p{5cm}|c|p{5.5cm}|}
+\caption{Hasil Pengujian Fitur Tambah Pencapaian} \label{tab:pengujian-tambah-Pencapaian} \\
+\hline
+\textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+\hline
+\endhead
+
+\hline
+\multicolumn{4}{r}{\textit{bersambung ke halaman berikutnya}} \\
+\endfoot
+
+\hline
+\endlastfoot
+
+1 & Form tambah pencapaian tampil & Lulus & Halaman form tampil dengan kolom judul dan unggah gambar. \\
+\hline
+2 & Input judul valid & Lulus & Sistem menerima judul dan menyimpannya dengan benar. \\
+\hline
+3 & Input gambar valid & Lulus & Gambar berhasil diunggah dan disimpan. \\
+\hline
+4 & Tombol simpan ditekan dengan isian lengkap & Lulus & Data tersimpan ke database dan muncul di daftar pencapaian. \\
+\hline
+5 & Form disimpan tanpa mengisi judul & Lulus & Sistem menampilkan pesan kesalahan “Judul wajib diisi”. \\
+\hline
+6 & Form disimpan tanpa memilih gambar & Lulus & Sistem menampilkan pesan kesalahan “Gambar wajib diunggah”. \\
+\hline
+7 & Upload file dengan format tidak valid (PDF, DOCX) & Lulus & Sistem menolak file dan menampilkan pesan kesalahan “Format file tidak didukung”. \\
+\hline
+
+\end{longtable}
+\noindent \textbf{2. Detail Pencapaian} \\
+    Berikut table pengujian detail Pencapaian
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.75}
+        \centering
+        \caption{Hasil Pengujian Fitur Detail Pencapaian}
+        \label{tab:pengujian-detail-Pencapaian}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Menampilkan judul pencapaian & Lulus & Judul pencapaian tampil sesuai data yang disimpan di database. \\
+            \hline
+            2 & Menampilkan gambar pencapaian & Lulus & Gambar tampil dengan ukuran dan kualitas yang sesuai pada halaman detail. \\
+            \hline
+            3 & Tombol unduh gambar tersedia & Lulus & Terdapat tombol unduh di bawah gambar atau di pojok atas tampilan. \\
+            \hline
+            4 & Fungsi unduh gambar berjalan baik & Lulus & Gambar berhasil diunduh ke perangkat pengguna tanpa korupsi. \\
+            \hline
+            \end{tabular}
+        \end{table}
+
+\noindent \textbf{3. Mengubah Pencapaian} \\
+    Berikut table pengujian mengubah Pencapaian
+    \small
+\renewcommand{\arraystretch}{0.75}
+\begin{center}
+\begin{longtable}{|c|p{5cm}|c|p{5.5cm}|}
+\caption{Hasil Pengujian Fitur Ubah Pencapaian} \label{tab:pengujian-ubah-Pencapaian} \\
+\hline
+\textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+\hline
+\endhead
+
+\hline
+\multicolumn{4}{r}{\textit{lanjutan ke halaman berikutnya}} \\
+\endfoot
+
+\hline
+\endlastfoot
+
+1 & Menampilkan data pencapaian yang akan diubah & Lulus & Data judul dan gambar ditampilkan dengan benar sesuai data yang dipilih. \\
+\hline
+2 & Mengubah judul pencapaian & Lulus & Sistem berhasil menyimpan perubahan judul. \\
+\hline
+3 & Mengunggah ulang gambar pencapaian & Lulus & Gambar baru berhasil diunggah dan menggantikan gambar sebelumnya. \\
+\hline
+4 & Validasi jika judul kosong & Lulus & Sistem menampilkan pesan error bahwa judul wajib diisi. \\
+\hline
+5 & Validasi file gambar & Lulus & Sistem menolak file non-gambar dan menampilkan pesan kesalahan. \\
+\hline
+6 & Tombol simpan perubahan & Lulus & Setelah klik simpan, data berhasil diperbarui dan ditampilkan kembali dengan data terbaru. \\
+\hline
+
+\end{longtable}
+\end{center}
+
+\noindent \textbf{4. Hapus Pencapaian} \\
+    Berikut pengujian hapus Pencapaian
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.3}
+        \caption{Hasil Pengujian Fitur Hapus Pencapaian}
+        \label{tab:pengujian-hapus-Pencapaian}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+        \hline
+        \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+        \hline
+        1 & Klik icon hapus pada daftar Pencapaian & Lulus & Sistem menampilkan konfirmasi sebelum menghapus Pencapaian. \\
+        \hline
+        2 & Konfirmasi penghapusan disetujui & Lulus & Pencapaian berhasil dihapus dari database dan tidak tampil di daftar. \\
+        \hline
+        3 & Konfirmasi penghapusan dibatalkan & Lulus & Penghapusan dibatalkan dan Pencapaian tetap muncul di daftar. \\
+        \hline
+        \end{tabular}
+        \end{table}

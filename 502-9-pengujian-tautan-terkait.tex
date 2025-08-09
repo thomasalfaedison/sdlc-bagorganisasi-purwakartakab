@@ -1,0 +1,117 @@
+\subsubsection*{5.2.9 Menu Tautan Terkait}
+
+\addcontentsline{toc}{subsubsection}{5.2.9 Menu Tautan Terkait}
+
+\noindent \textbf{1. Tambah Tautan Terkait}\\
+    Berikut table pengujian untuk Tambah Tautan Terkait.
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.65}
+        \centering
+        \caption{Hasil Pengujian Fitur Tambah Tautan Terkait}
+        \label{tab:pengujian-tambah-Tautan Terkait}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Menampilkan form tambah informasi "Tautan Terkait" & Lulus & Form tampil dengan kolom nama, tautan/link, dan unggah gambar. \\
+            \hline
+            2 & Input nama profil instansi & Lulus & Nama dapat diketik dengan bebas dan disimpan dengan baik. \\
+            \hline
+            3 & Input tautan eksternal (URL) & Lulus & Link dapat disimpan dan diverifikasi, serta aktif saat ditampilkan. \\
+            \hline
+            4 & Upload gambar profil instansi & Lulus & Gambar berhasil diunggah dan ditampilkan dalam pratinjau. \\
+            \hline
+            5 & Validasi form kosong & Lulus & Sistem menampilkan pesan kesalahan saat ada kolom wajib yang kosong. \\
+            \hline
+            6 & Simpan informasi "Tautan Terkait" & Lulus & Informasi disimpan ke database dan dapat ditampilkan di halaman publik. \\
+            \hline
+            \end{tabular}
+        \end{table}
+    
+        \newpage
+
+\noindent \textbf{2. Detail Tautan Terkait} \\
+    Berikut table pengujian detail Tautan Terkait
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.65}
+        \centering
+        \caption{Hasil Pengujian Fitur Detail Tautan Terkait}
+        \label{tab:pengujian-detail-Tautan Terkait}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Menampilkan nama tautan & Lulus & Nama tautan tampil sesuai data yang dimasukkan oleh admin. \\
+            \hline
+            2 & Menampilkan link/tautan & Lulus & Link dapat diklik dan mengarah ke halaman eksternal dengan benar. \\
+            \hline
+            3 & Menampilkan gambar (thumbnail/logo) & Lulus & Gambar ditampilkan sesuai data yang diunggah dan tampil proporsional. \\
+            \hline
+            4 & Mengunduh gambar tautan & Lulus & Gambar dapat diunduh dalam format yang sesuai (JPG/PNG) tanpa rusak. \\
+            \hline
+            \end{tabular}
+        \end{table}
+
+\noindent \textbf{3. Mengubah Tautan Terkait} \\
+    Berikut table pengujian mengubah Tautan Terkait
+    \small
+\renewcommand{\arraystretch}{1.2}
+
+\begin{longtable}{|c|p{5cm}|c|p{5.5cm}|}
+\caption{Hasil Pengujian Fitur Ubah Tautan Terkait}
+\label{tab:pengujian-ubah-Tautan-Terkait} \\
+\hline
+\textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+\hline
+\endhead
+
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+
+1 & Menampilkan form “Tautan Terkait” & Lulus & Form menampilkan kolom nama, tautan, dan gambar dengan data yang sudah tersimpan. \\
+\hline
+2 & Mengubah nama & Lulus & Sistem berhasil menyimpan dan menampilkan nama yang diperbarui. \\
+\hline
+3 & Menambahkan/ubah tautan eksternal & Lulus & Tautan dapat diperbarui dan saat diklik mengarah ke alamat yang benar. \\
+\hline
+4 & Mengunggah gambar baru & Lulus & Gambar baru berhasil diunggah dan ditampilkan di halaman publik. \\
+\hline
+5 & Validasi form kosong & Lulus & Sistem menolak simpan jika deskripsi kosong atau link tidak valid. \\
+\hline
+6 & Validasi format gambar (jpg/png) & Lulus & Sistem hanya menerima format gambar tertentu dan menolak file selain gambar. \\
+\hline
+
+\end{longtable}
+
+\vspace{-0.8em}
+
+\noindent \textbf{4. Hapus Tautan Terkait} \\
+    Berikut pengujian hapus Tautan Terkait
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.3}
+        \caption{Hasil Pengujian Fitur Hapus Tautan Terkait}
+        \label{tab:pengujian-hapus-Tautan Terkait}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+        \hline
+        \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+        \hline
+        1 & Klik icon hapus pada daftar Tautan Terkait & Lulus & Sistem menampilkan konfirmasi sebelum menghapus Tautan Terkait. \\
+        \hline
+        2 & Konfirmasi penghapusan disetujui & Lulus & Tautan Terkait berhasil dihapus dari database dan tidak tampil di daftar. \\
+        \hline
+        3 & Konfirmasi penghapusan dibatalkan & Lulus & Penghapusan dibatalkan dan Tautan Terkait tetap muncul di daftar. \\
+        \hline
+        \end{tabular}
+        \end{table}

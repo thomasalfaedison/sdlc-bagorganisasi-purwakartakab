@@ -1,0 +1,194 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{ragged2e}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[figurename=Gambar]{caption}
+\usepackage{textcase}
+\usepackage{hhline}
+\usepackage{colortbl}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{seqsplit}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{fancyvrb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage[none]{hyphenat}
+
+
+\hypersetup{hidelinks}
+
+\setmainfont{Times New Roman}
+\doublespacing
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection.}{1em}{}
+
+\newcommand{\titlefull}{%
+DOKUMEN SOFTWARE DEVELOPMENT LIFE CYCLE (SDLC)
+WEBSITE PORTAL BAGIAN ORGANISASI
+SEKRETARIAT DAERAH\\ KABUPATEN PURWAKARTA
+}
+
+
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{1em}
+
+% format section
+\titleformat{\section} % command
+  {\fontsize{14pt}{14pt}\selectfont\bfseries\raggedright} % format
+  {\thesection} % label
+  {0pt} % sep
+  {} % before-code
+
+
+% format subsection
+\titleformat{\subsection} % command
+  {\fontsize{12pt}{12pt}\selectfont\bfseries} % format
+  {\thesubsection} % label
+  {0pt} % sep
+  {} % before-code
+
+% format subsubsection
+\titleformat{\subsubsection} % command
+  {\fontsize{12pt}{12pt}\selectfont\bfseries} % format
+  {\thesubsubsection} % label
+  {0pt} % sep
+  {} % before-code
+
+% format subsubsection
+\titleformat{\paragraph} % command
+{\fontsize{12pt}{12pt}\selectfont\bfseries} % format
+{\theparagraph} % label
+{0pt} % sep
+{} % before-code
+
+
+
+\begin{document}
+
+  \input{000-sampul.tex}
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\input{004-daftar-isi.tex}
+
+\justifying 
+
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{100-pendahuluan.tex}
+\input{101-latar-belakang.tex}
+\input{102-maksud-dan-tujuan.tex}
+\input{103-landasan-hukum.tex}
+\input{104-kondisi-yang-diharapkan.tex}
+\input{105-lingkup-pekerjaan.tex}
+
+\newpage
+
+\input{200-kajian-analisis-kebutuhan.tex}
+\input{201-fungsional.tex}
+\input{202-non-fungsional.tex}
+
+
+\newpage
+
+\input{300-rancang-bangun.tex}
+\input{303-bisnis-proses.tex}
+\input{302-use-case.tex}
+\input{303-arsitektur-pengembangan.tex}
+
+
+\newpage
+\input{304-pemodelan-data.tex}
+
+\newpage
+\input{305-desain-tatapmuka.tex}
+
+\newpage
+
+\input{400-implementasi.tex}
+\input{401-landing-page.tex}
+
+\newpage
+\input{402-halaman-admin.tex}
+
+\newpage
+
+\input{500-pengujian.tex}
+\input{501-pengujian-landing-page.tex}
+
+\newpage
+
+\input{502-0-pengujian-halaman-admin.tex}
+\input{502-1-pengujian-login.tex}
+
+\newpage
+
+\input{502-2-pengujian-dashboard.tex}
+
+\newpage
+
+\input{502-3-pengujian-berita.tex}
+\input{502-4-pengujian-dokumen.tex}
+\input{502-5-pengujian-pencapaian.tex}
+
+\newpage
+
+\input{502-6-pengujian-gambar-sampul.tex}
+
+\newpage
+
+\input{502-7-pengujian-teks-depan.tex}
+
+\newpage
+
+\input{502-8-pengujian-tentang-kami.tex}
+
+\newpage
+
+\input{502-9-pengujian-tautan-terkait.tex}
+
+\newpage
+
+\input{502-10-pengujian-informasi.tex}
+
+\newpage
+
+\input{502-11-pengujian-users.tex}
+
+\newpage
+
+\input{600-pemeliharaan.tex}
+
+\newpage
+
+\input{700-evaluasi.tex}
+
+\label{LastPage}
+
+\end{document}

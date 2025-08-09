@@ -1,0 +1,288 @@
+\subsubsection*{5.2.11 Menu User}
+
+\addcontentsline{toc}{subsubsection}{5.2.11 Menu User}
+
+\noindent Pada menu Users terdapat 2 (dua) sub menu yaitu Admin dan Unit Kerja. Berikut pengujian untuk setiap sub Menu User.
+
+\noindent \textbf{1. Admin}
+
+\noindent \textbf{a. Filter Username}\\
+    Berikut table pengujian untuk Filter Username.
+    \begin{table}[h!]
+        \renewcommand{\arraystretch}{1.3}
+        \centering
+        \caption{Hasil Pengujian Fitur Filter Username}
+        \label{tab:pengujian-tambah-User}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Menampilkan kolom/field filter username & Lulus & Kolom filter username ditampilkan dengan jelas di atas tabel data pengguna atau aktivitas. \\
+            \hline
+            2 & Filter dengan username lengkap & Lulus & Sistem berhasil memfilter dan menampilkan data sesuai username yang diketik secara lengkap. \\
+            \hline
+            3 & Filter dengan sebagian karakter username (auto-suggest atau contains) & Lulus & Sistem tetap menampilkan data pengguna yang mengandung karakter yang diketik (fitur like/contains berfungsi). \\
+            \hline
+            4 & Filter dengan username yang tidak terdaftar & Lulus & Sistem menampilkan pesan “Data tidak ditemukan” atau tabel kosong. \\
+            \hline
+            5 & Reset filter username & Lulus & Setelah filter dihapus atau dikosongkan, sistem menampilkan kembali seluruh data. \\
+            \hline
+            \end{tabular}
+        \end{table}
+
+        \newpage
+
+\noindent \textbf{b. Tambah User}\\
+    Berikut table pengujian untuk Tambah User.
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.65}
+        \centering
+        \caption{Hasil Pengujian Fitur Tambah User}
+        \label{tab:pengujian-tambah-User}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Form tambah user muncul dengan benar & Lulus & Form menampilkan field nama, username, dan password sesuai desain. \\
+            \hline
+            2 & Simpan data user dengan input valid & Lulus & Data user berhasil disimpan dan muncul di daftar pengguna. \\
+            \hline
+            3 & Validasi field kosong (semua kosong) & Lulus & Sistem menampilkan pesan "semua field wajib diisi". \\
+            \hline
+            % 4 & Username sudah digunakan & Lulus & Sistem menampilkan pesan error bahwa username telah terdaftar sebelumnya. \\
+            % \hline
+            % 5 & Validasi panjang minimal password & Lulus & Sistem menolak password yang kurang dari 6 karakter dan menampilkan pesan error. \\
+            % \hline
+            4 & Notifikasi berhasil setelah simpan & Lulus & Setelah simpan berhasil, sistem menampilkan notifikasi "User berhasil ditambahkan". \\
+            \hline
+            \end{tabular}
+        \end{table}
+
+\noindent \textbf{c. Set Password User}\\
+    Berikut table pengujian untuk TSet Password.
+    \AfterEndEnvironment{longtable}{\vspace{-0.5em}}
+    \small % font sedikit dikecilkan
+    \renewcommand{\arraystretch}{1.1} % spasi antar baris tabel sedikit rapat
+    
+    \begin{center}
+    \begin{longtable}{|c|p{5cm}|c|p{5.5cm}|}
+    \caption{Hasil Pengujian Fitur Tambah User}
+    \label{tab:pengujian-tambah-User} \\
+    \hline
+    \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+    \hline
+    \endfirsthead
+    
+    \hline
+    \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+    \hline
+    \endhead
+    
+    \hline
+    \endfoot
+    
+    \hline
+    \endlastfoot
+    
+    1 & Akses halaman manajemen pengguna & Lulus & Admin dapat membuka daftar pengguna melalui menu User. \\
+    \hline
+    2 & Klik tombol "Set Password" pada salah satu user & Lulus & Sistem menampilkan form untuk mengatur ulang password pengguna. \\
+    \hline
+    3 & Mengisi password baru dan menyimpan & Lulus & Password berhasil diubah dan disimpan ke dalam database. \\
+    \hline
+    4 & User dapat login dengan password baru & Lulus & Pengguna dapat masuk ke sistem menggunakan password yang baru ditetapkan oleh admin. \\
+    \hline
+    5 & Password lama tidak dapat digunakan lagi & Lulus & Sistem menolak login dengan password sebelumnya karena sudah diubah. \\
+    \hline
+    6 & Validasi form kosong & Lulus & Sistem menampilkan pesan validasi jika password kosong. \\
+    \hline
+    7 & Keamanan password disimpan dalam bentuk hash & Lulus & Password yang diatur oleh admin tersimpan dalam bentuk hash di database (tidak plaintext). \\
+    \hline
+    
+    \end{longtable}
+    \end{center}
+
+\noindent \textbf{d. Mengubah User} \\
+    Berikut table pengujian mengubah User
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.65}
+        \centering
+        \caption{Hasil Pengujian Fitur Ubah User}
+        \label{tab:pengujian-ubah-User}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Form ubah akun tampil dengan isian nama, username, dan konfirmasi password & Lulus & Form ditampilkan lengkap dan sesuai dengan data akun saat ini. \\
+            \hline
+            2 & Mengubah nama dan username dengan password konfirmasi yang benar & Lulus & Data akun berhasil diperbarui dan disimpan ke database. \\
+            \hline
+            3 & Mengubah data dengan password konfirmasi yang salah & Lulus & Sistem menolak perubahan dan menampilkan pesan “Password salah”. \\
+            \hline
+            4 & Mengubah nama saja (username tetap) & Lulus & Perubahan nama tersimpan tanpa masalah. \\
+            \hline
+            5 & Mengubah username saja (nama tetap) & Lulus & Username berhasil diperbarui jika belum digunakan oleh akun lain. \\
+            \hline
+            6 & Kolom nama atau username dikosongkan & Lulus & Sistem menampilkan pesan validasi bahwa kolom tidak boleh kosong. \\
+            \hline
+            % 7 & Mengganti username dengan yang sudah digunakan akun lain & Lulus & Sistem menolak perubahan dan menampilkan pesan “Username sudah digunakan”. \\
+            % \hline
+            \end{tabular}
+        \end{table}
+
+% \noindent \textbf{4. Hapus User} \\
+%     Berikut pengujian hapus User
+%     \begin{table}[h!]
+%         \centering
+%         \small
+%         \renewcommand{\arraystretch}{1.3}
+%         \caption{Hasil Pengujian Fitur Hapus User}
+%         \label{tab:pengujian-hapus-User}
+%         \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+%         \hline
+%         \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+%         \hline
+%         1 & Klik icon hapus pada daftar User & Lulus & Sistem menampilkan konfirmasi sebelum menghapus User. \\
+%         \hline
+%         2 & Konfirmasi penghapusan disetujui & Lulus & User berhasil dihapus dari database dan tidak tampil di daftar. \\
+%         \hline
+%         3 & Konfirmasi penghapusan dibatalkan & Lulus & Penghapusan dibatalkan dan User tetap muncul di daftar. \\
+%         \hline
+%         \end{tabular}
+%         \end{table}
+
+
+\newpage
+
+\noindent \textbf{2. Unit Kerja}
+        
+    \noindent \textbf{a. Filter Akun}\\
+    Berikut table pengujian untuk Filter Akun.
+        \begin{table}[H]
+            \small
+            \renewcommand{\arraystretch}{0.65}
+            \centering
+            \caption{Hasil Pengujian Fitur Filter Username}
+            \label{tab:pengujian-tambah-User}
+            \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+                \hline
+                \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+                \hline
+                1 & Filter berdasarkan instansi saja & Lulus & Sistem berhasil menampilkan data pengguna yang hanya berasal dari instansi yang dipilih. \\
+                \hline
+                2 & Filter berdasarkan username saja & Lulus & Sistem menampilkan data yang sesuai dengan teks yang diketik pada kolom pencarian username. \\
+                \hline
+                3 & Filter berdasarkan instansi dan username secara bersamaan & Lulus & Data difilter secara tepat sesuai dengan kombinasi pilihan instansi dan isian username. \\
+                \hline
+                4 & Filter dengan data yang tidak cocok & Lulus & Sistem menampilkan pesan atau hasil kosong ketika tidak ditemukan data yang sesuai dengan filter. \\
+                \hline
+                5 & Reset filter & Lulus & Semua data kembali ditampilkan saat filter dikosongkan atau tombol reset ditekan. \\
+                \hline
+            \end{tabular}
+        \end{table}
+        
+    \noindent \textbf{b. Set Password User}\\
+    Berikut table pengujian untuk TSet Password.
+    \AfterEndEnvironment{longtable}{\vspace{-0.5em}}
+    \small % font sedikit dikecilkan
+    \renewcommand{\arraystretch}{1.1} % spasi antar baris tabel sedikit rapat
+    
+    \begin{center}
+    \begin{longtable}{|c|p{5cm}|c|p{5.5cm}|}
+    \caption{Hasil Pengujian Fitur Tambah User}
+    \label{tab:pengujian-tambah-User} \\
+    \hline
+    \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+    \hline
+    \endfirsthead
+    
+    \hline
+    \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+    \hline
+    \endhead
+    
+    \hline
+    \endfoot
+    
+    \hline
+    \endlastfoot
+    
+    1 & Akses halaman manajemen pengguna & Lulus & Admin dapat membuka daftar pengguna melalui menu User. \\
+    \hline
+    2 & Klik tombol "Set Password" pada salah satu user & Lulus & Sistem menampilkan form untuk mengatur ulang password pengguna. \\
+    \hline
+    3 & Mengisi password baru dan menyimpan & Lulus & Password berhasil diubah dan disimpan ke dalam database. \\
+    \hline
+    4 & User dapat login dengan password baru & Lulus & Pengguna dapat masuk ke sistem menggunakan password yang baru ditetapkan oleh admin. \\
+    \hline
+    5 & Password lama tidak dapat digunakan lagi & Lulus & Sistem menolak login dengan password sebelumnya karena sudah diubah. \\
+    \hline
+    6 & Validasi form kosong & Lulus & Sistem menampilkan pesan validasi jika password kosong. \\
+    \hline
+    7 & Keamanan password disimpan dalam bentuk hash & Lulus & Password yang diatur oleh admin tersimpan dalam bentuk hash di database (tidak plaintext). \\
+    \hline
+    
+    \end{longtable}
+    \end{center}
+        
+    \noindent \textbf{3. Mengubah User} \\
+    Berikut table pengujian mengubah User
+    \small
+    \renewcommand{\arraystretch}{0.65}
+    \begin{longtable}{|c|p{5cm}|c|p{5.5cm}|}
+    \caption{Hasil Pengujian Fitur Ubah User} \label{tab:pengujian-ubah-User} \\
+    \hline
+    \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+    \hline
+    \endfirsthead
+    
+    \hline
+    \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+    \hline
+    \endhead
+    
+    \hline
+    \endfoot
+    
+    \hline
+    \endlastfoot
+    
+    1 & Form ubah akun tampil dengan isian nama, username, dan konfirmasi password & Lulus & Form ditampilkan lengkap dan sesuai dengan data akun saat ini. \\
+    \hline
+    2 & Mengubah nama dan username dengan password konfirmasi yang benar & Lulus & Data akun berhasil diperbarui dan disimpan ke database. \\
+    \hline
+    3 & Mengubah data dengan password konfirmasi yang salah & Lulus & Sistem menolak perubahan dan menampilkan pesan “Password salah”. \\
+    \hline
+    4 & Mengubah nama saja (username tetap) & Lulus & Perubahan nama tersimpan tanpa masalah. \\
+    \hline
+    5 & Mengubah username saja (nama tetap) & Lulus & Username berhasil diperbarui jika belum digunakan oleh akun lain. \\
+    \hline
+    6 & Kolom nama atau username dikosongkan & Lulus & Sistem menampilkan pesan validasi bahwa kolom tidak boleh kosong. \\
+    \hline
+    \end{longtable}
+    
+    \vspace{-0.5em}
+        
+    % \noindent \textbf{4. Hapus User} \\
+    % Berikut pengujian hapus User
+    %     \begin{table}[h!]
+    %         \centering
+    %         \small
+    %         \renewcommand{\arraystretch}{1.3}
+    %         \caption{Hasil Pengujian Fitur Hapus User}
+    %         \label{tab:pengujian-hapus-User}
+    %         \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+    %         \hline
+    %             \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+    %             \hline
+    %             1 & Klik icon hapus pada daftar User & Lulus & Sistem menampilkan konfirmasi sebelum menghapus User. \\
+    %             \hline
+    %             2 & Konfirmasi penghapusan disetujui & Lulus & User berhasil dihapus dari database dan tidak tampil di daftar. \\
+    %             \hline
+    %             3 & Konfirmasi penghapusan dibatalkan & Lulus & Penghapusan dibatalkan dan User tetap muncul di daftar. \\
+    %             \hline
+    %             \end{tabular}
+    %             \end{table}
+        

@@ -1,0 +1,124 @@
+\subsubsection*{5.2.7 Menu Teks Depan}
+
+\addcontentsline{toc}{subsubsection}{5.2.7 Menu Teks Depan}
+
+\noindent \textbf{1. Tambah Teks Depan}\\
+    Berikut table pengujian untuk Tambah Teks Depan.
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.75}
+        \centering
+        \caption{Hasil Pengujian Fitur Tambah Teks Depan}
+        \label{tab:pengujian-tambah-Teks Depan}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Form input teks utama & Lulus & Kolom teks utama berhasil diisi dan ditampilkan di halaman depan. \\
+            \hline
+            2 & Form input subteks & Lulus & Subteks berhasil disimpan dan ditampilkan di bawah teks utama. \\
+            \hline
+            3 & Form input teks tombol & Lulus & Teks tombol tampil sesuai input, seperti "Selengkapnya". \\
+            \hline
+            4 & Form input tautan/link & Lulus & Tombol mengarah ke tautan yang sesuai saat diklik. \\
+            \hline
+            5 & Pilihan status aktif/tidak aktif & Lulus & Saat status tidak aktif, konten tidak ditampilkan di halaman depan. \\
+            \hline
+            6 & Validasi input kosong & Lulus & Sistem menampilkan pesan validasi jika ada kolom wajib yang kosong. \\
+            \hline
+            7 & Simpan teks depan ke database & Lulus & Data berhasil disimpan dan dapat ditampilkan ulang atau diperbarui. \\
+            \hline
+            8 & Teks tampil realtime di landing page & Lulus & Perubahan teks langsung terlihat tanpa error setelah disimpan. \\
+            \hline
+            \end{tabular}
+        \end{table}
+
+        \newpage
+    
+\noindent \textbf{2. Detail Teks Depan} \\
+    Berikut table pengujian detail Teks Depan
+    \begin{table}[H]
+        \small
+        \renewcommand{\arraystretch}{0.75}
+        \centering
+        \caption{Hasil Pengujian Fitur Detail Teks Depan}
+        \label{tab:pengujian-detail-Teks Depan}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+            \hline
+            \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+            \hline
+            1 & Menampilkan Teks & Lulus & Teks tampil yang sesuai pada halaman detail. \\
+            \hline
+            2 & Menampilkan Sub Teks & Lulus & Sub Teks tampil yang sesuai pada halaman detail. \\
+            \hline
+            3 & Menampilkan Teks Tombol & Lulus & Teks Tombol tampil yang sesuai pada halaman detail. \\
+            \hline
+            4 & Menampilkan Tautan/Link & Lulus & Tautan/Link tampil yang sesuai pada halaman detail. \\
+            \hline
+            \end{tabular}
+        \end{table}
+
+\noindent \textbf{3. Mengubah Teks Depan} \\
+    Berikut table pengujian mengubah Teks Depan
+    \smallskip % Untuk spasi kecil sebelum tabel
+
+\renewcommand{\arraystretch}{1} % Spasi antarbaris, bisa ubah ke 0.9 kalau mau lebih rapat
+\begin{center}
+\begin{longtable}{|c|p{5cm}|c|p{5.5cm}|}
+\caption{Hasil Pengujian Fitur Ubah Teks Depan}
+\label{tab:pengujian-ubah-Teks-Depan} \\
+\hline
+\textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+\hline
+\endhead
+
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+
+1 & Menampilkan form ubah teks depan & Lulus & Form ditampilkan dengan isian: teks, subteks, teks tombol, tautan, dan status. \\
+\hline
+2 & Input teks utama & Lulus & Sistem menyimpan teks utama dengan benar dan langsung ditampilkan di halaman depan. \\
+\hline
+3 & Input subteks & Lulus & Subteks berhasil disimpan dan ditampilkan tepat di bawah teks utama. \\
+\hline
+4 & Input teks tombol & Lulus & Tombol di halaman depan menampilkan teks sesuai input. \\
+\hline
+5 & Input tautan/link tombol & Lulus & Saat tombol ditekan, pengguna diarahkan ke tautan yang dimasukkan. \\
+\hline
+6 & Ubah status aktif menjadi tidak aktif & Lulus & Jika status dinonaktifkan, komponen teks depan tidak muncul di halaman landing. \\
+\hline
+7 & Validasi isian kosong & Lulus & Sistem menolak penyimpanan jika isian penting (teks/tombol/link) dikosongkan. \\
+\hline
+\end{longtable}
+\end{center}
+
+\vspace{-0.5em}
+
+\noindent \textbf{4. Hapus Teks Depan} \\
+    Berikut pengujian hapus Teks Depan
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.3}
+        \caption{Hasil Pengujian Fitur Hapus Teks Depan}
+        \label{tab:pengujian-hapus-Teks Depan}
+        \begin{tabular}{|c|p{5cm}|c|p{5.5cm}|}
+        \hline
+        \textbf{No} & \textbf{Fitur/Elemen yang Diuji} & \textbf{Hasil} & \textbf{Keterangan} \\
+        \hline
+        1 & Klik icon hapus pada daftar Teks Depan & Lulus & Sistem menampilkan konfirmasi sebelum menghapus Teks Depan. \\
+        \hline
+        2 & Konfirmasi penghapusan disetujui & Lulus & Teks Depan berhasil dihapus dari database dan tidak tampil di daftar. \\
+        \hline
+        3 & Konfirmasi penghapusan dibatalkan & Lulus & Penghapusan dibatalkan dan Teks Depan tetap muncul di daftar. \\
+        \hline
+        \end{tabular}
+        \end{table}
